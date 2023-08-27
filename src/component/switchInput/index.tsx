@@ -3,7 +3,7 @@ import React from "react";
 const SwitchInput = ({ formik, name }: any) => {
   const handleChange = (value) => {
     formik.setFieldValue(`${name}`, {
-      key: "AMOUNT",
+      key: formik.values[name].key,
       value: value.target.value,
     });
   };
